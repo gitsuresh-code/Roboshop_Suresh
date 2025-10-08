@@ -4,7 +4,7 @@
 
   tasks:
   - name: disabling and enabling version
-    ansbile.builtin.shell: dnf module disable nginx -y && dnf module enable nginx:1.24 -y
+    ansible.builtin.shell: dnf module disable nginx -y && dnf module enable nginx:1.24 -y
 
   - name: Installing the package
     ansible.builtin.package:
