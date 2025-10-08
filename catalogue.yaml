@@ -46,7 +46,7 @@
       remote_src: yes
   
   - name: install dependencies
-    commmunity.general.npm:
+    community.general.npm:
       path: /app
   
   - name: Copying the service file to systemd
