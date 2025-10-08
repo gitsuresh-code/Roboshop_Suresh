@@ -2,11 +2,9 @@
 Description = Cart Service
 [Service]
 User=roboshop
-// highlight-start
 Environment=REDIS_HOST=redis.sureshdevops.fun
 Environment=CATALOGUE_HOST=catalogue.sureshdevops.fun
 Environment=CATALOGUE_PORT=8080
-// highlight-end
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=cart
 
