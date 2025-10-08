@@ -5,14 +5,14 @@
   tasks:
   - name: Copying Repo file
     ansible.builtin.copy:
-      src: mongo.Repo
+      src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
   
   - name: Installing the mongodb
     ansible.builtin.package:
       name: mongodb-org
       state: present
-      
+
   - name: enable and starting mongodb
     ansible.builtin.service:
       name: mongod
