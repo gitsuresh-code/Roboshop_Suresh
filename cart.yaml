@@ -60,7 +60,7 @@
   - name: Enabling and starting service
     ansible.builtin.service:
       name: cart
-      state: started
+      state: restarted
 
 
   
