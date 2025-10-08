@@ -11,11 +11,6 @@
       name: nginx
       state: present
   
-  - name: enabling and starting nginx
-    ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
   
 
   - name: remove the default content
@@ -49,6 +44,8 @@
     ansible.builtin.service:
       name: nginx
       state: restarted
+      enabled: yes
+      
       
   
 
