@@ -1,0 +1,3 @@
+- name: Frontend Setup
+  hosts: fronted
+  become: yes
