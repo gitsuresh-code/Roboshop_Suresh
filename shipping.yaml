@@ -43,8 +43,14 @@
       remote_src: yes
   
   - name: install dependencies
-    community.general.npm:
-      path: /app
+    command: mvn clean package
+    args:
+      chdir: /app
+
+  - name: Renaming file
+    command: mv target/shipping-1.0.jar shipping.jar 
+    args:
+      chdir: /app
   
   - name: Copying the service file to systemd
     copy:
@@ -61,11 +67,6 @@
       state: started
       enabled: yes
   
-  - name: SQL client mysql_secure_installation
-    package:
-      name: mysql
-      state: present
-
   - name: import shipping data into mysql
     community.mysql.mysql_db:
       state: import
