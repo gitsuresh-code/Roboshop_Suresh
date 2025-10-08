@@ -66,6 +66,10 @@
       name: shipping
       state: started
       enabled: yes
+  - name: installing SQL client
+    package:
+      name: mysql
+      state: present
   
   - name: import shipping data into mysql
     community.mysql.mysql_db:
