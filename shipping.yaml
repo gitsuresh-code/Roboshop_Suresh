@@ -1,5 +1,5 @@
 - name: Shipping Setup
-  hosts: shippping
+  hosts: shipping
   become: yes
 
   tasks:
