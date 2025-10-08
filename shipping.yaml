@@ -1,8 +1,8 @@
-- name: configure shipping server
+- name: Shipping Setup
   hosts: shipping
   become: yes
   tasks:
-  - name: install maven
+  - name: install maven and MYSQL client
     ansible.builtin.dnf:
       name: "{{ item }}"
       state: present
@@ -18,7 +18,7 @@
     - cryptography
     - PyMySQL
 
-  - name: create roboshop system user
+  - name: Application user creattion
     ansible.builtin.user:
       name: roboshop
       comment: RoboShop System user
@@ -62,7 +62,7 @@
     args:
       chdir: /app
 
-  - name: copy shipping service
+  - name: copy shipping service file to systemd
     ansible.builtin.copy:
       src: shipping.service
       dest: /etc/systemd/system/shipping.service
@@ -80,7 +80,7 @@
     - /app/db/app-user.sql 
     - /app/db/master-data.sql
 
-  - name: daemon reload enable and start
+  - name: daemon reload and enabling and starting service
     ansible.builtin.systemd_service:
       name: shipping
       enabled: true
