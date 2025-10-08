@@ -16,7 +16,7 @@
   - name: enable and starting mongodb
     ansible.builtin.service:
       name: mongod
-      state: present
+      state: started
       enabled: yes
 
   - name: Updating mongo config file to enable public access
