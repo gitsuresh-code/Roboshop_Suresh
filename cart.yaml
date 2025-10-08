@@ -1,6 +1,6 @@
 - name: Cart Setup
-  hosts: local
-  connection: local
+  hosts: cart
+  become: yes
 
   tasks: 
   - name: enabling & disabling version
