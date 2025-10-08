@@ -5,7 +5,7 @@
   vars:
     ami_id: ami-09c813fb71547fc4f
     sg_id: sg-0bdcda12513912f85
-    zone_id: Z04272802545XSOGBRNOM
+    zone_id: "Z04272802545XSOGBRNOM"
     domain_name: sureshdevops.fun
   # instances:
   # - mongo
