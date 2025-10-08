@@ -36,7 +36,8 @@
   - name: downloading the frontend files
     ansible.builtin.unarchive:
       src: /tmp/frontend.zip
-      dest: /usr/share/nginx/html/ 
+      dest: /usr/share/nginx/html/
+      remote_src: yes
 
   - name: Copying the nginx config file
     ansible.builtin.copy:
