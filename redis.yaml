@@ -23,6 +23,6 @@
       line: "protected-mode no"
   
   - name: Installing the redis server
-    ansible.builtin.package:
+    ansible.builtin.service:
       name: redis
       state: restarted
