@@ -20,7 +20,7 @@
     ansible.builtin.lineinfile:
       path: /etc/redis/redis.conf
       regexp: "protected-mode"
-      file: "protected-mode no"
+      line: "protected-mode no"
   
   - name: Installing the redis server
     ansible.builtin.package:
