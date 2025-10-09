@@ -1,7 +1,3 @@
-- name: Shipping Setup
-  hosts: shipping
-  become: yes
-  tasks:
   - name: install maven and MYSQL client
     ansible.builtin.dnf:
       name: "{{ item }}"

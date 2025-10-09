@@ -1,7 +1,3 @@
-- name: Rabbit MQ setup
-  hosts: rabbitmq
-  become: yes
-  tasks:
   - name: copying repo file
     copy:
       src: rabbitmq.repo

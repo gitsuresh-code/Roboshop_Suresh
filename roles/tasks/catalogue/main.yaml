@@ -1,8 +1,3 @@
-- name: Catalogue Setup
-  hosts: catalogue
-  become: yes
-
-  tasks:
   - name: Enabling and Disabling the version
     ansible.builtin.shell: dnf module disable nodejs -y && dnf module enable nodejs:20 -y
 
