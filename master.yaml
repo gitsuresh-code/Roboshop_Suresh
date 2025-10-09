@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: "{{ component }}"
   become: yes
   tasks:
     - name: Run roles for each component
