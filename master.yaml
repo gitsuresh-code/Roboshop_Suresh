@@ -1,6 +1,7 @@
-- name: "{{ component }} setup"
-  hosts: "{{ component }}"
+- hosts: all
   become: yes
-  roles:
-  - "{{ item }}"
-  loop: "{{ component }}"
+  tasks:
+    - name: Run roles for each component
+      include_role:
+        name: "{{ item }}"
+      loop: "{{ component }}"
