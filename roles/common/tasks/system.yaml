@@ -1,4 +1,4 @@
-- name: Copying the "{{ catalogue }}" service file to systemd
+- name: Copying the {{ catalogue }} service file to systemd
   ansible.builtin.copy:
     src: "{{ component }}.service.j2"
     dest: /etc/sysetmd/system/{{ component }}.service
