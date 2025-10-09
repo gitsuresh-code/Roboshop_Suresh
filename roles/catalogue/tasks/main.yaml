@@ -25,7 +25,7 @@
   register: catalogue_output
   
 - name: Loading the data into Mongo
-  ansible.builtin.shell: mongosh --host "{{ mongo_db }}"n </app/db/master-data.js
+  ansible.builtin.shell: mongosh --host "{{ mongo_db }}" </app/db/master-data.js
   when: catalogue_output.stdout | int < 0 
   
 - name: Service creation and starting service
