@@ -1,2 +1,6 @@
 sql: sql.sureshdevops.fun
 cart: cart.sureshdevops.fun
+
+HOST: sql.sureshdevops.fun
+user: root
+pwd: RoboShop@1

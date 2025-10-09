@@ -23,9 +23,9 @@
   community.mysql.mysql_db:
       state: import
       name: all
-      login_host: sql.sureshdevops.fun
-      login_user: root
-      login_password: RoboShop@1
+      login_host: "{{ HOST }}"
+      login_user: "{{ user }}"
+      login_password: "{{ pwd }}"
       target: "{{ item }}"
   loop:
     - /app/db/schema.sql
