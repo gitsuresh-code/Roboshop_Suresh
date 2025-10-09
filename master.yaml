@@ -1,4 +1,5 @@
-- hosts: "{{ component }}"
+- name: Master data sheet
+  hosts: "{{ component }}"
   become: yes
   tasks:
     - name: Run roles for each component
