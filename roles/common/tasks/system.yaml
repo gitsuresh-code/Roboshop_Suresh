@@ -1,5 +1,5 @@
 - name: Copying the {{ component }} service file to systemd
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: "{{ component }}.service.j2"
     dest: "/etc/sysetmd/system/{{ component }}.service"
   notify: daemon reload
