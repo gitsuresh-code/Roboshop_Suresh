@@ -1,3 +1,5 @@
 mongo_db: mongod.sureshdevops.fun
 redis: redis.sureshdevops.fun
 catalogue: catalogue.sureshdevops.fun
+sql: sql.sureshdevops.fun
+cart: cart.sureshdevops.fun
