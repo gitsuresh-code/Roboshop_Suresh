@@ -28,11 +28,6 @@
       dest: /usr/share/nginx/html/
       remote_src: yes
 
-  - name: Copying the nginx config file
-    ansible.builtin.copy:
-      src: nginx.conf
-      dest: /etc/nginx/nginx.conf
-  
 
   - name: Restarting nginx
     ansible.builtin.template:
