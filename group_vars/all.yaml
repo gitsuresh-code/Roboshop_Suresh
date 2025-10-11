@@ -3,3 +3,4 @@ redis: redis.sureshdevops.fun
 catalogue: catalogue.sureshdevops.fun
 sql: sql.sureshdevops.fun
 cart: cart.sureshdevops.fun
+user: user.sureshdevops.fun
