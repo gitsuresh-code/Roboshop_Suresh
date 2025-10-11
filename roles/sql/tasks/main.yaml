@@ -3,7 +3,7 @@
     name: mysql-server
     state: present
   
-- name: enabling and disabling the mysqld
+- name: enabling and starting the mysqld
   service:
    name: mysqld
    state: started
